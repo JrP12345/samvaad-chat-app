@@ -27,11 +27,10 @@ connectDB();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000", // Adjust as needed
-    credentials: true,
+    origin: "http://localhost:3000", // Allow requests only from this origin
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );
-
 app.use(express.json());
 
 app.use("/auth", authRoutes);
@@ -167,5 +166,5 @@ io.on("connection", (socket) => {
 
 // Start the server
 httpServer.listen(process.env.PORT || 4000, () => {
-  console.log("Server is Running On Port", process.env.PORT);
+  // console.log("Server is Running On Port", process.env.PORT);
 });
