@@ -1,0 +1,107 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #181818; /* Dark background for the entire chat */
+}
+
+.flex {
+  display: flex;
+}
+
+.rounded-lg {
+  border-radius: 10px;
+}
+
+.shadow-2xl {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat message styles */
+.chat-message {
+  margin: 10px 0;
+}
+
+/* User message alignment */
+.chat-message.user {
+  text-align: right; /* Align user's messages to the right */
+}
+
+.chat-message.other {
+  text-align: left; /* Align others' messages to the left */
+}
+
+/* Style for input fields */
+input[type="text"],
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #4a90e2; /* Highlight input field on focus */
+}
+
+button {
+  cursor: pointer;
+}
+/* Hide the default scrollbar */
+.chat-window::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  background: transparent; /* Background of the scrollbar track */
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #4a90e2; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+  background: #3a78b2; /* Color on hover */
+}
+
+/* For Firefox */
+.chat-window {
+  scrollbar-width: thin; /* Makes the scrollbar thin */
+  scrollbar-color: #4a90e2 transparent; /* Thumb color and track color */
+}
+
+/* Style adjustments for the chat window */
+.chat-window {
+  height: 90vh; /* Set the height of the chat window */
+  overflow-y: auto; /* Allow scrolling for overflow */
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.sidebar {
+  height: 90vh; /* Adjust this value as needed */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  margin-top: 5px;
+}
+.notification-circle {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.dot {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
