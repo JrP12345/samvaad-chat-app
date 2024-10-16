@@ -4,11 +4,6 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -18,21 +13,13 @@ This project is a real-time chat application built using **React** for the front
 
 - **User Authentication**: 
   - Users can register and log in securely.
-  - Role selection during registration (e.g., user or farmer).
 
 - **Real-Time Messaging**: 
   - Instant message delivery using WebSockets.
-  - Supports text, images, and file sharing.
-
-- **Responsive Design**: 
-  - Fully responsive layout for desktop and mobile devices.
   
 - **Chat Interface**: 
   - Organized chat bubbles for sent and received messages.
   - Displays timestamps for each message.
-
-- **User Presence Indicators**: 
-  - Show online/offline status for users.
 
 - **Notifications**: 
   - Alerts for new messages, ensuring users never miss a conversation.
@@ -40,14 +27,11 @@ This project is a real-time chat application built using **React** for the front
 - **Search Functionality**: 
   - Search through chat history or find specific users.
 
-- **User Settings**: 
-  - Manage profile details, including status messages and profile pictures.
-
 ## Technologies Used
 
 - **Frontend**:
   - React
-  - CSS (or a CSS framework like Bootstrap/Chakra UI)
+  - CSS (or a CSS framework like Tailwind)
 
 - **Backend**:
   - Node.js
@@ -57,9 +41,7 @@ This project is a real-time chat application built using **React** for the front
 - **Database**:
   - MongoDB (or any other preferred database)
 
-## Installation
 
-To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
