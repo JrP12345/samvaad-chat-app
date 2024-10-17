@@ -8,8 +8,10 @@ import authRoutes from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 import { Message } from "./models/message.js";
 import { Group } from "./models/group.js";
+import path from "path";
 // Load environment variables from .env file
 dotenv.config();
+connectDB();
 
 const app = express();
 const httpServer = createServer(app);
@@ -21,8 +23,7 @@ const io = new Server(httpServer, {
   },
 });
 
-connectDB();
-
+const _dirname = path.resolve();
 // Middleware
 app.use(cookieParser());
 app.use(
@@ -164,7 +165,12 @@ io.on("connection", (socket) => {
   });
 });
 
+app.use(express.static(path.join(_dirname, "/frontend/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(_dirname, "frontend", "build", "index.html"));
+});
+
 // Start the server
 httpServer.listen(process.env.PORT || 4000, () => {
-  // console.log("Server is Running On Port", process.env.PORT);
+  console.log("Server is Running On Port", process.env.PORT);
 });
