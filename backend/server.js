@@ -28,7 +28,7 @@ const _dirname = path.resolve();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow requests only from this origin
+    origin: "https://samvaad-chat-app.onrender.com", // Allow requests only from this origin
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );

@@ -17,9 +17,12 @@ function App() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/auth/check", {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          "https://samvaad-chat-app.onrender.com/auth/check",
+          {
+            withCredentials: true,
+          }
+        );
         setIsAuthenticated(response.data.isAuthenticated);
       } catch (error) {
         console.error("Error checking authentication:", error);

@@ -12,7 +12,7 @@ const Register = ({ setOnLoginPage }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/auth/register",
+        "https://samvaad-chat-app.onrender.com/auth/register",
         {
           username,
           email,

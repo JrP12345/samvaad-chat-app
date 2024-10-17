@@ -1,3 +1,3 @@
 import { io } from "socket.io-client";
-const socket = io("http://localhost:4000"); // Backend server URL
+const socket = io("https://samvaad-chat-app.onrender.com"); // Backend server URL
 export default socket;

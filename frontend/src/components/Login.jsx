@@ -8,7 +8,7 @@ const Login = ({ setOnLoginPage, onLoginSuccess }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/auth/login",
+        "https://samvaad-chat-app.onrender.com/auth/login",
         {
           email,
           password,

@@ -8,10 +8,13 @@ function Navbar({ setIsAuthenticated }) {
   const handleLogout = async () => {
     try {
       // Call the logout API to clear the HttpOnly cookie from the backend
-      const response = await fetch("http://localhost:4000/auth/logout", {
-        method: "POST",
-        credentials: "include", // Include cookies in the request
-      });
+      const response = await fetch(
+        "https://samvaad-chat-app.onrender.com/auth/logout",
+        {
+          method: "POST",
+          credentials: "include", // Include cookies in the request
+        }
+      );
 
       if (response.ok) {
         alert("Logged out successfully");
@@ -33,10 +36,13 @@ function Navbar({ setIsAuthenticated }) {
   useEffect(() => {
     const fetchUsername = async () => {
       try {
-        const response = await fetch("http://localhost:4000/auth/userInfo", {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://samvaad-chat-app.onrender.com/auth/userInfo",
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();

@@ -11,10 +11,13 @@ function UserProfile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/auth/userInfo", {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://samvaad-chat-app.onrender.com/auth/userInfo",
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
         if (response.ok) {
           const data = await response.json();
           setUserData(data);
